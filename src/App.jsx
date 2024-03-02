@@ -12,6 +12,12 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem('taskList', JSON.stringify(taskList))
   }, [taskList])
+
+  const handleDelete = (cardIndex) => {
+    const newTaskList = taskList.filter((task, index) => index !== cardIndex)
+    setTaskList(newTaskList)
+  }
+
   return (
     <div className="main">
       <header>
@@ -32,21 +38,42 @@ const App = () => {
         <section className="todo-section">
           {taskList.map((task, index) => {
             if (task.status === 'todo') {
-              return <TaskCard key={index} task={task} />
+              return (
+                <TaskCard
+                  key={index}
+                  task={task}
+                  handleDelete={handleDelete}
+                  cardIndex={index}
+                />
+              )
             }
           })}
         </section>
         <section className="doing-section">
           {taskList.map((task, index) => {
             if (task.status === 'doing') {
-              return <TaskCard key={index} task={task} />
+              return (
+                <TaskCard
+                  key={index}
+                  task={task}
+                  handleDelete={handleDelete}
+                  cardIndex={index}
+                />
+              )
             }
           })}
         </section>
         <section className="done-section">
           {taskList.map((task, index) => {
             if (task.status === 'done') {
-              return <TaskCard key={index} task={task} />
+              return (
+                <TaskCard
+                  key={index}
+                  task={task}
+                  cardIndex={index}
+                  handleDelete={handleDelete}
+                />
+              )
             }
           })}
         </section>
