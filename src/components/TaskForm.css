@@ -1,0 +1,42 @@
+form.task-form {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form.task-form input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #dfe3e6;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+select.status {
+  font-size: 14px;
+  padding: 3px 8px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+button.add-task {
+  padding: 6px 10px;
+
+  font-size: 16px;
+  color: #fff;
+  background-color: #6457f9;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  margin-left: 10px;
+  border-radius: 4px;
+}

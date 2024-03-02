@@ -1,0 +1,38 @@
+img.delete-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-wrapper {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.delete-wrapper:hover {
+  background-color: rgb(220, 220, 220);
+  opacity: 0.4;
+}
+
+.task-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 6px 8px;
+  border: 1px solid brown;
+  border-radius: 5px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
